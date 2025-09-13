@@ -1,0 +1,24 @@
+User , Groups(Expenses), 
+
+
+Expenses -> Description , participants , amounts, 
+
+
+Group -> Members, Transactions, amounts
+
+Members -> Paid for, dues
+
+------------------------------------------------------------------------------------------------
+
+
+Frontend Pages:
+
+Register Page: (Using Name, email)
+
+Home Page: All groups, individual Expenses
+
+Group Page: (dues, To be paid), Transactions
+
+SIngle person Expense page: Transactions with due or to pay amount at top
+
+Own Expense Page: Transactions
