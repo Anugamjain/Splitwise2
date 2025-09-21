@@ -15,10 +15,24 @@ Frontend Pages:
 
 Register Page: (Using Name, email)
 
-Home Page: All groups, individual Expenses
+Home Page: Welcome to Splitwise CLone
 
-Group Page: (dues, To be paid), Transactions
+Groups Page: list of groups with final amount on top
 
-SIngle person Expense page: Transactions with due or to pay amount at top
+   individual Group page: 
+         > Total due or to pay amount at top
+         > Date wise Transactions with Description and Members involved and their amount
+         > settle up button
+         > Add expense (Description, Paid By, Members involved, Amounts)
 
-Own Expense Page: Transactions
+Friends page: list of Friends with final amount on top
+
+   individual Friends page: 
+         > Total due or to pay amount at top
+         > Date wise Transactions with Description and amount
+         > settle up button
+
+My Expense Page: 
+   > Final dues/owes on top
+   > Transactions with dates and Description 
+   > filter on Transactions with final amount
