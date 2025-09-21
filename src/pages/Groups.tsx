@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const demoGroups = [
   {
@@ -35,21 +36,26 @@ const demoGroups = [
 
 const Groups: React.FC = () => {
   const [groupsData, setGroupsData] = useState(demoGroups);
+  const navigate = useNavigate();
+
+  const handleNavigate = (groupId: number) => {
+    navigate(`/group-transactions/${groupId}`);
+  }
 
   return (
-    <div className="container mx-auto p-4">
+    <div className="m-5 text-center">
       {/* Groups Section */}
-      <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4">Groups</h2>
+      <section>
+        <h2 className="text-2xl font-bold mb-4">Group Expenses</h2>
         <div className="space-y-4">
-          <div className="p-4 bg-white shadow rounded hover:bg-gray-50 cursor-pointer">
-            <h3 className="font-semibold">Trip to Goa</h3>
-            <p className="text-sm text-red-500">You owe ₹500</p>
-          </div>
-          <div className="p-4 bg-white shadow rounded hover:bg-gray-50 cursor-pointer">
-            <h3 className="font-semibold">Dinner Party</h3>
-            <p className="text-sm text-green-500">You are owed ₹200</p>
-          </div>
+          {groupsData.map((group) => (
+            <div onClick={() => handleNavigate(group.id)} className="p-4 bg-white shadow rounded hover:bg-gray-50 cursor-pointer">
+              <h3 className="font-semibold"> {group.groupName} </h3>
+              <p className={group.balance < 0 ? "text-sm text-red-500" : "text-sm text-green-500"}>
+                {group.balance < 0 ? "You owe " : "You owed"} ₹{Math.abs(group.balance)}</p>
+              <p className="text-sm">{group.lastTransaction}</p>
+            </div>
+          ))}
         </div>
       </section>
 

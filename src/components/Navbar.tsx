@@ -8,11 +8,13 @@ const Navbar: React.FC = () => {
     <nav className="bg-black text-white p-4 flex justify-between items-center relative">
       {/* Logo */}
       <div className="text-xl font-bold flex justify-start">
-        <img
-          className="w-[50px] rounded-xl"
-          alt="app-logo"
-          src="/images/app-logo.png"
-        />
+        <Link to="/">
+          <img
+            className="w-[50px] rounded-xl"
+            alt="app-logo"
+            src="/images/app-logo.png"
+          />
+        </Link>
       </div>
 
       {/* Desktop Menu */}
@@ -20,16 +22,28 @@ const Navbar: React.FC = () => {
         <Link to="/" className="no-underline text-white hover:text-gray-300">
           Home
         </Link>
-        <Link to="/friends" className="no-underline text-white hover:text-gray-300">
+        <Link
+          to="/friends"
+          className="no-underline text-white hover:text-gray-300"
+        >
           Friends
         </Link>
-        <Link to="/groups" className="no-underline text-white hover:text-gray-300">
+        <Link
+          to="/groups"
+          className="no-underline text-white hover:text-gray-300"
+        >
           Groups
         </Link>
-        <Link to="/my-expenses" className="no-underline text-white hover:text-gray-300">
+        <Link
+          to="/my-expenses"
+          className="no-underline text-white hover:text-gray-300"
+        >
           My Expenses
         </Link>
-        <Link to="/profile" className="no-underline text-white hover:text-gray-300">
+        <Link
+          to="/profile"
+          className="no-underline text-white hover:text-gray-300"
+        >
           Profile
         </Link>
       </div>
@@ -47,19 +61,39 @@ const Navbar: React.FC = () => {
       {/* Mobile Dropdown */}
       {isOpen && (
         <div className="absolute top-[70px] right-4 bg-gray-900 rounded-lg shadow-lg p-4 flex flex-col space-y-3 md:hidden">
-          <Link to="/" className="no-underline text-white hover:text-gray-300" onClick={() => setIsOpen(false)}>
+          <Link
+            to="/"
+            className="no-underline text-white hover:text-gray-300"
+            onClick={() => setIsOpen(false)}
+          >
             Home
           </Link>
-          <Link to="/friends" className="no-underline text-white hover:text-gray-300" onClick={() => setIsOpen(false)}>
+          <Link
+            to="/friends"
+            className="no-underline text-white hover:text-gray-300"
+            onClick={() => setIsOpen(false)}
+          >
             Friends
           </Link>
-          <Link to="/groups" className="no-underline text-white hover:text-gray-300" onClick={() => setIsOpen(false)}>
+          <Link
+            to="/groups"
+            className="no-underline text-white hover:text-gray-300"
+            onClick={() => setIsOpen(false)}
+          >
             Groups
           </Link>
-          <Link to="/my-expenses" className="no-underline text-white hover:text-gray-300" onClick={() => setIsOpen(false)}>
+          <Link
+            to="/my-expenses"
+            className="no-underline text-white hover:text-gray-300"
+            onClick={() => setIsOpen(false)}
+          >
             My Expenses
           </Link>
-          <Link to="/profile" className="no-underline text-white hover:text-gray-300" onClick={() => setIsOpen(false)}>
+          <Link
+            to="/profile"
+            className="no-underline text-white hover:text-gray-300"
+            onClick={() => setIsOpen(false)}
+          >
             Profile
           </Link>
         </div>

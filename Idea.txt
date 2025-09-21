@@ -8,6 +8,9 @@ Group -> Members, Transactions, amounts
 
 Members -> Paid for, dues
 
+Transaction: Description, PaidBy(drop down), amount, dates
+      :  
+
 ------------------------------------------------------------------------------------------------
 
 
